@@ -22,7 +22,7 @@ let indiceAtual = 1;
 
 
 function mover(direcao){
-    imagens[indiceAtual].classList.remove('ativa');
+    imagens[indiceAtual].removeAttribute('id');
 
     if (direcao === 'esquerda'){
         indiceAtual = Math.max(0, indiceAtual-1);
@@ -30,5 +30,5 @@ function mover(direcao){
         indiceAtual = Math.min(imagens.length - 1, indiceAtual + 1);
     }
 
-    imagens[indiceAtual].classList.add('ativa');
+    imagens[indiceAtual].id='ativa';
 }
